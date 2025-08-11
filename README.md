@@ -37,12 +37,13 @@ https://github.com/YuMaehashi/ISHI-KAI/tree/main/PTC06/202508_OPAMP
 ![テスト回路](img/2stage_pc_ac_3.png)
 ![解析結果](img/opamp_cs_full_sch_analyze.png)
 10 KHzぐらいまでは50dB程度、20dBなら1MHzの帯域までカバーしている結果に。　　
-果たして結果はどうでしょうか？ワクワクですね！
+果たして結果はどうでしょうか？  
+ワクワクですね！
 # レイアウト
 [opamp_full.gds](opamp_full.gds)
 ![レイアウト](img/opamp_full.gds.png)
 左側の電源部分はMaehashiさんに作って頂いき、右側のアンプ部分のレイアウトを描きました。
-# エラー等つまづきポイント
+# LVSが実行できなかったエラー
 LVSを実行するとRun timeエラーが発生。
 ![LVSエラー](img/1.webp)
 
@@ -58,7 +59,7 @@ bash uninstall.sh
 
 最新版の環境構築用のスクリプトをダウンロードしてフェニテックシャトルPDKをインストール  
 https://github.com/ishi-kai/OpenRule1umPDK_setupEDA
-
+# LVSのエラー表示の見方（正しいかどうかは分からないけど、たぶんこんなかんじ？）
 KLayoutのLVSのエラーの見方について  
 Logをまず見たほうが良さそうです。どうやら$1267,$3がネットリストに対応している模様。  
 ![log](img/2.png)
